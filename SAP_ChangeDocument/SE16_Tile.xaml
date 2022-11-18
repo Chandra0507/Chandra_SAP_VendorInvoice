@@ -1,0 +1,341 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SE16_Tile" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="inputFileData" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1150,2619.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SE16_Tile_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="78">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="86">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SE16_Tile" sap:VirtualizedContainerService.HintSize="694.6666666666666,2554.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="SE16_Process" sap:VirtualizedContainerService.HintSize="652.6666666666666,2464.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="WorkingOnSE16Tile" sap:VirtualizedContainerService.HintSize="614,2220" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Application: SAP Easy Access" sap:VirtualizedContainerService.HintSize="572,2130" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="{x:Null}" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence sap:VirtualizedContainerService.HintSize="538,1827.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Passing_SE16" sap:VirtualizedContainerService.HintSize="496,1602.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[inputFileData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,1478" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,1350.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ucas:CallTransaction ContinueOnError="{x:Null}" DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="358,170" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[CurrentRow.Item(&quot;TileCode&quot;).ToString]">
+                              <ucas:CallTransaction.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d18a73b3-059d-40c7-9073-dae282c298a4" InformativeScreenshot="74e9eb6201ee38b5c461d1fff710429a">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ucas:CallTransaction.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ucas:CallTransaction>
+                            <uix:NTakeScreenshot ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBeforeScreenshot="{x:Null}" DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\3.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" InScope="{x:Null}" InUiElement="{x:Null}" OutFile="{x:Null}" OutImage="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Timeout="{x:Null}" Version="V3">
+                              <uix:NTakeScreenshot.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="61c61df3-fcf6-4ed5-abd1-f8eecb137578" InformativeScreenshot="286c27515fe888d82d6d473f13ffd564.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Initial Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTakeScreenshot.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTakeScreenshot>
+                            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'CTextField Table Name'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Text="[CurrentRow.Item(&quot;TableName&quot;).ToString + &quot;[k(enter)]&quot;]" Timeout="{x:Null}" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="294, 310, 428, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Table Name'" FullSelectorArgument="&lt;sap id='usr/ctxtDATABROWSE-TABLENAME' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDATABROWSE-TABLENAME' /&gt;" Guid="a731222c-34e9-4559-867a-531cd87c53cf" InformativeScreenshot="6026313242b19762754382a11c1b9fa5.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Initial Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NTakeScreenshot ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBeforeScreenshot="{x:Null}" DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\4.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" InScope="{x:Null}" InUiElement="{x:Null}" OutFile="{x:Null}" OutImage="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Timeout="{x:Null}" Version="V3">
+                              <uix:NTakeScreenshot.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="f485a8bb-6091-47cb-a0af-e0493ced5ad5" InformativeScreenshot="bd8b2acdd43500e3bfc01dd478596b54.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table USR02: Selection Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTakeScreenshot.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTakeScreenshot>
+                            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="UserType" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Text="[CurrentRow.Item(&quot;UserType&quot;).ToString + &quot;[k(tab)]&quot;]" Timeout="{x:Null}" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="463, 403, 25, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField User Type'" FullSelectorArgument="&lt;sap id='usr/ctxtI4-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtI4-LOW' /&gt;" Guid="526a8ea8-9456-480d-b3e7-0ca87bd1ef35" InformativeScreenshot="c9b912e885743a5a34bd3a003579a7b1.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table USR02: Selection Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="MaxNumOfHits" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="358,228.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Text="[CurrentRow.Item(&quot;MaXNoHits&quot;).ToString]" Timeout="{x:Null}" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="463, 558, 155, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'200'" FullSelectorArgument="&lt;sap id='usr/txtMAX_SEL' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtMAX_SEL' /&gt;" Guid="4bf7d43c-aa63-4a82-9eaf-6d314c8c0ac0" InformativeScreenshot="c476ac37af7fbb1a687bc85b0867efec.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table USR02: Selection Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NTakeScreenshot ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBeforeScreenshot="{x:Null}" DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\5.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" InScope="{x:Null}" InUiElement="{x:Null}" OutFile="{x:Null}" OutImage="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Timeout="{x:Null}" Version="V3">
+                              <uix:NTakeScreenshot.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="007e3a2e-90a0-4bba-904f-163140f150de" InformativeScreenshot="1a8916b3ccd3e0d3e35fdd9286cd6d0f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table USR02: Selection Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTakeScreenshot.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTakeScreenshot>
+                            <uix:NClick AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Button Execute (F8)'" sap:VirtualizedContainerService.HintSize="358,167.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Timeout="{x:Null}" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="25, 183, 45, 47" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Execute (F8)'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" Guid="6e4a09fe-1d4d-48ac-a9e9-7cca24e9e547" InformativeScreenshot="59786ce6f3463cdca710633054bb8a0f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table USR02: Selection Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NTakeScreenshot ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBeforeScreenshot="{x:Null}" DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\6.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_4" InScope="{x:Null}" InUiElement="{x:Null}" OutFile="{x:Null}" OutImage="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Timeout="{x:Null}" Version="V3">
+                              <uix:NTakeScreenshot.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="2644ca92-3664-4a16-bee0-df00f0d6a5d7" InformativeScreenshot="a1b609fa8fbe12b512577920336b5476.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table USR02 Select Entries        514' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTakeScreenshot.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTakeScreenshot>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                  </Sequence>
+                  <Sequence DisplayName="TableDataExtraction" sap:VirtualizedContainerService.HintSize="496,92" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenPages="{x:Null}" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Cl.' ReferenceIdx='0' Name='Cl.'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='User Name' ReferenceIdx='1' Name='User Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password' ReferenceIdx='2' Name='Password'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Valid from' ReferenceIdx='3' Name='Valid from'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Valid to' ReferenceIdx='4' Name='Valid to'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='User Type' ReferenceIdx='5' Name='User Type'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='User Master Maintenance: User Group' ReferenceIdx='6' Name='User Master Maintenance: User Group'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Number of failed logon attempts' ReferenceIdx='7' Name='Number of failed logon attempts'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='User Lock Status' ReferenceIdx='8' Name='User Lock Status'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Account number' ReferenceIdx='9' Name='Account number'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Creator of User Master Record' ReferenceIdx='10' Name='Creator of User Master Record'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Creation Date of User Master' ReferenceIdx='11' Name='Creation Date of User Master'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Last Logon Date' ReferenceIdx='12' Name='Last Logon Date'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Last Logon Time' ReferenceIdx='13' Name='Last Logon Time'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password1' ReferenceIdx='14' Name='Password1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date of Last Password Change' ReferenceIdx='15' Name='Date of Last Password Change'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Code Vers.' ReferenceIdx='16' Name='Password Code Vers.'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password2' ReferenceIdx='17' Name='Password2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date of Last Password Change1' ReferenceIdx='18' Name='Date of Last Password Change1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Code Vers.1' ReferenceIdx='19' Name='Password Code Vers.1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password3' ReferenceIdx='20' Name='Password3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date of Last Password Change2' ReferenceIdx='21' Name='Date of Last Password Change2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Code Vers.2' ReferenceIdx='22' Name='Password Code Vers.2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password4' ReferenceIdx='23' Name='Password4'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date of Last Password Change3' ReferenceIdx='24' Name='Date of Last Password Change3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Code Vers.3' ReferenceIdx='25' Name='Password Code Vers.3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password5' ReferenceIdx='26' Name='Password5'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date of Last Password Change4' ReferenceIdx='27' Name='Date of Last Password Change4'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Code Vers.4' ReferenceIdx='28' Name='Password Code Vers.4'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='User master record version' ReferenceIdx='29' Name='User master record version'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Code Version (New)' ReferenceIdx='30' Name='Password Code Version (New)'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Time Zone' ReferenceIdx='31' Name='Time Zone'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='CUA User Template' ReferenceIdx='32' Name='CUA User Template'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Hash Value (SHA1, 160 Bit)' ReferenceIdx='33' Name='Password Hash Value (SHA1, 160 Bit)'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date of Last Password Change5' ReferenceIdx='34' Name='Date of Last Password Change5'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Change Status' ReferenceIdx='35' Name='Password Change Status'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='CUA Control Information' ReferenceIdx='36' Name='CUA Control Information'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='External Password History(USRPWDHISTORY)' ReferenceIdx='37' Name='External Password History(USRPWDHISTORY)'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date of Last Password Logon' ReferenceIdx='38' Name='Date of Last Password Logon'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date: Password Reset by Administrator' ReferenceIdx='39' Name='Date: Password Reset by Administrator'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Indicator: Password Is Initial' ReferenceIdx='40' Name='Indicator: Password Is Initial'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date: Password Lock' ReferenceIdx='41' Name='Date: Password Lock'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Password Hash Val' ReferenceIdx='42' Name='Password Hash Val'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Security Policy' ReferenceIdx='43' Name='Security Policy'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Approver Name' ReferenceIdx='44' Name='Approver Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NExtractData_2" InScope="{x:Null}" InUiElement="{x:Null}" LimitExtractionTo="None" MaximumResults="0" OutUiElement="{x:Null}" ScopeIdentifier="1ffe05c7-3fd9-4efe-b6d5-03e0cbdbe0e6" Timeout="{x:Null}" Version="V3">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" FriendlyName="'SAPGUI.GridViewCtrl.1'" FullSelectorArgument="&lt;sap id='usr/cntlGRID1/shellcont/shell' /&gt;" Guid="884e7137-956f-4bc8-8f12-15fe4f193f9c" InformativeScreenshot="823162b7091aad6e3e0efaf6b20b56e9.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Data Browser: Table USR02 Select Entries          4' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NExtractData>
+                    <ui:WriteCsvFile AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" Encoding="{x:Null}" FilePath="OP\Extracted_OP.csv" sap:VirtualizedContainerService.HintSize="338,62" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCsvFile>
+                  </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-11, -11, 1942, 1042" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="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" InformativeScreenshot="9c5c427a282fbcefaff246857d339be0.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;" Title="Data Browser: Table USR02 Select Entries          5" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="618.6666666666666,21.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,103.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Message Occured During the SE16 Process&quot; + exception.Message]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

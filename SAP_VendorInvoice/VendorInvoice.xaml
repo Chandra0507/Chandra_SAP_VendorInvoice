@@ -1,0 +1,547 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VendorInvoice" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="vendInvInputData" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1150,3354.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>VendorInvoice_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="102">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="VendorInvoice" sap:VirtualizedContainerService.HintSize="756.6666666666666,3290" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="VendorInvoicePrcess" sap:VirtualizedContainerService.HintSize="714.6666666666666,3200" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.6666666666666,3078" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SAP Easy Access" sap:VirtualizedContainerService.HintSize="614,2833.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="580,2530.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[vendInvInputData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="538,2438" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currRow" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,2310.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="vendorResponce" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[currRow.Item(&quot;VendorInvoiceTile&quot;).ToString]">
+                            <ucas:CallTransaction.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8dd1bf52-202d-40fc-96ae-a4e2f5072551" InformativeScreenshot="1f49f092a5bff383d016b0c8291b77a3">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ucas:CallTransaction.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ucas:CallTransaction>
+                          <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\3.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                            <uix:NTakeScreenshot.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="7f6d1332-7e39-4f42-a956-48d31e012c38" InformativeScreenshot="9b82de3f8df7a74dda6740ecc972c04f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTakeScreenshot.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTakeScreenshot>
+                          <uix:NClick ClickType="Single" DisplayName="ComapnyCodeBtn" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="170, 183, 203, 47" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Company Code'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[7]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[7]' check:text='Company Code' /&gt;" Guid="899e2ff7-4842-4641-aa2e-ce94bde89fb1" InformativeScreenshot="153731083b1eee2fccbc0f62345afc65.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FS00' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringCompanyCode" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Text="[currRow.Item(&quot;CompanyCode&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="241, 55, 90, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'FAST'" FullSelectorArgument="&lt;sap id='usr/ctxtBKPF-BUKRS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtBKPF-BUKRS' /&gt;" Guid="3938cf5c-b322-475f-aeee-5a630a431c50" InformativeScreenshot="2e479e276921b195c216677cf92dee11.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Enter Company Code' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringVendor" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Text="[currRow.Item(&quot;vendor&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="242, 341, 233, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Account'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-ACCNT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-ACCNT' /&gt;" Guid="6d755ac6-0e23-4a46-a7e4-f8fa712ee164" InformativeScreenshot="39e4c35374de5f099e6f9b597c5c1699.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="Delay_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="InvoiceDate" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Text="[currRow.Item(&quot;InvoiceDate&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="242, 372, 142, 29" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'CTextField Invoice'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BLDAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BLDAT' /&gt;" Guid="fed0fc8f-809d-48d8-9931-57e1d99c6bf3" InformativeScreenshot="89fb35d411c920af8584581f19a43040.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="Delay_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\4.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                            <uix:NTakeScreenshot.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="5cec85e9-b4e6-4fd5-8191-7cff70ad0f76" InformativeScreenshot="01ec4daae8a44ddb6ad2ba00ddb6184c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTakeScreenshot.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTakeScreenshot>
+                          <Sequence sap:VirtualizedContainerService.HintSize="462,92" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:Boolean" Name="elementExists" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:UiElementExists DisplayName="Element Exists 'saplogon.exe  Informati...'" Exists="[elementExists]" sap:VirtualizedContainerService.HintSize="416.6666666666667,116" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0318319d-0a58-4494-ae98-314fdfd8d706" InformativeScreenshot="4ad1cb4419bd87b4f24a174d41e5b2de" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;&lt;sap id='usr/txtIK1' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:UiElementExists>
+                            <If Condition="[elementExists = True]" sap:VirtualizedContainerService.HintSize="416.6666666666667,434.6666666666667" sap2010:WorkflowViewState.IdRef="If_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Button Continue (Enter)'" sap:VirtualizedContainerService.HintSize="334,167.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="695, 205, 45, 35" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Continue (Enter)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="c59a2514-3ab8-4902-92a5-d3eb7bf3446b" InformativeScreenshot="5735d4627f37152c2892e6cdb7864199.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                          <Sequence DisplayName="GLAccDataAndCostCenter" sap:VirtualizedContainerService.HintSize="462,1036" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Amount" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Text="[currRow.Item(&quot;Amount&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="242, 465, 402, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Amount'" FullSelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/txtINVFO-WRBTR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/txtINVFO-WRBTR' /&gt;" Guid="72b369d8-4f7c-46db-bf9d-6b94c18cf249" InformativeScreenshot="b5e159bf1376154ec07f7b635daf7c0e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="GLAcc" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Text="[currRow.Item(&quot;GLAcc&quot;).ToString + &quot;[k(tab)]&quot;]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="102, 743, 137, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField G/L acct'" FullSelectorArgument="&lt;sap colTooltip='G/L Account' id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='G/L Account' id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' /&gt;" Guid="b6da9474-5fa4-4160-ad32-14c9cfa0f020" InformativeScreenshot="05ba9d4a66661c4fb8c1d2033c0487f8.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="AmountInDocCurr" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Text="[currRow.Item(&quot;Amount&quot;).ToString + &quot;[k(tab)]&quot;]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="477, 743, 397, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Amount'" FullSelectorArgument="&lt;sap colTooltip='Amount' id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Amount' id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' /&gt;" Guid="56780b45-6b11-4156-86b0-a00e17270a2f" InformativeScreenshot="5cf91a47364697aec09dd8da5ae01e8b.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTypeInto>
+                            <Sequence DisplayName="CostCenter" sap:VirtualizedContainerService.HintSize="400,92" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Cost center'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="338,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Text="[currRow.Item(&quot;CostCenter&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="1141, 743, 137, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Cost center'" FullSelectorArgument="&lt;sap colTooltip='Cost Center' id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Cost Center' id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' /&gt;" Guid="f1209e6c-63b4-444e-a428-977a8fd25080" InformativeScreenshot="f2391895a0ef7957ca5516a7204b628b.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                            </Sequence>
+                            <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\5.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                              <uix:NTakeScreenshot.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="bffb5dfd-91ae-47b4-9c2b-c014f13503fb" InformativeScreenshot="01ec4daae8a44ddb6ad2ba00ddb6184c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTakeScreenshot.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTakeScreenshot>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Simulate'" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="491, 183, 147, 47" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Simulate'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[9]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[9]' check:text='Simulate' /&gt;" Guid="2f7d4114-4c47-41cb-b441-d4658421d9a0" InformativeScreenshot="bdfcc19b7205aff866f26df915677246.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\6.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_4" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                              <uix:NTakeScreenshot.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="006553a2-fae1-4497-abb6-2feb658b2658" InformativeScreenshot="e55efa4d4ba8440391a662ee7e1edfde.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Document Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NTakeScreenshot.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTakeScreenshot>
+                            <uix:NClick ClickType="Single" DisplayName="SaveBtn" sap:VirtualizedContainerService.HintSize="400,167.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ab0c25f-7d20-4f80-8250-306862a71457" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="377, 77, 44, 44" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Post (Ctrl+S)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" Guid="016cf38c-8988-4a4f-b3c5-9a854b3efd85" InformativeScreenshot="dd073f5832a02df69db4f5269b64ff57.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Document Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                          </Sequence>
+                          <Sequence DisplayName="CaptureTheResponseMessage" sap:VirtualizedContainerService.HintSize="462,92" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="MessageTypeVendor" />
+                              <Variable x:TypeArguments="x:String" Name="MessageTextVendor" />
+                              <Variable x:TypeArguments="s:String[]" Name="MessageDataVendor" />
+                              <Variable x:TypeArguments="sd:DataTable" Name="DT" />
+                              <Variable x:TypeArguments="sd:DataTable" Name="DT_1" />
+                              <Variable x:TypeArguments="sd:DataTable" Name="TableData" />
+                              <Variable x:TypeArguments="sd:DataRow" Name="curRow" />
+                              <Variable x:TypeArguments="sd:DataTable" Name="myDataTable" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" DisplayName="Read Status Bar 'StatusPane Document'" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageData="[MessageDataVendor]" MessageText="[MessageTextVendor]" MessageType="[MessageTypeVendor]">
+                              <ucas:ReadStatusbar.Target>
+                                <ui:Target Element="{x:Null}" Id="a8537662-b6a8-4a9b-9f82-8af51330dbf6" InformativeScreenshot="6d0066abef80a0d1674e4b41c81de375" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Enter Vendor Invoice: Company Code FAST' /&gt;&lt;sap id='sbar/pane[0]' /&gt;">
+                                  <ui:Target.ClippingRegion>
+                                    <ui:Region Rectangle="23, 7, 311, 14" />
+                                  </ui:Target.ClippingRegion>
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ucas:ReadStatusbar.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ucas:ReadStatusbar>
+                            <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="ScreenShots\7.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_5" Version="V3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NTakeScreenshot>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:02" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[MessageTextVendor]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:MessageBox>
+                            <Sequence DisplayName="WriteTheCaptureMsgToCSVFile" sap:VirtualizedContainerService.HintSize="400,92" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:BuildDataTable DataTable="[myDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="338,68.66666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ResponseMsg&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:BuildDataTable>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{MessageTextVendor}]" DataTable="[myDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,62.666666666666664" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:AddDataRow>
+                              <ui:WriteCsvFile AddHeaders="True" DataTable="[myDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Output\InvResponseMsg.csv" sap:VirtualizedContainerService.HintSize="338,62.666666666666664" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:WriteCsvFile>
+                            </Sequence>
+                          </Sequence>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ForEachRow>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-11, -11, 1942, 1042" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="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" InformativeScreenshot="83472a74315f6d3ee399e3c9a4a25d85.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="618.6666666666666,21.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,103.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Message Occured During the Vendor Invoice Process &quot; + exception.Message]" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+  </Sequence>
+</Activity>
