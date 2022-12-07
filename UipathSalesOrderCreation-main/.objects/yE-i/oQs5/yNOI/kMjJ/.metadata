@@ -1,0 +1,13 @@
+﻿{
+  "Id": "kMjJkwcWGUeAPCKIuAx-Vg",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/kMjJkwcWGUeAPCKIuAx-Vg",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/yNOILezm2EymV8WGXtUexQ",
+  "Name": "Shipping Point",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2022-11-03T09:16:45.8345473Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-03T09:16:45.8345473Z"
+}

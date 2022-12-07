@@ -1,0 +1,12 @@
+﻿{
+  "Id": "os0NDJ1aPEipB6V9vbCWNg",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/os0NDJ1aPEipB6V9vbCWNg",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/SL4CfGZL10uzh0yHsrqUCQ",
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Created": "2022-11-03T06:03:57.9321237Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-03T06:03:57.9321237Z"
+}

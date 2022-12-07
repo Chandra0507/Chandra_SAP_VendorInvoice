@@ -1,2 +1,2 @@
-SAPLogOnConnectionName,SAPClient,SAPUserName,SAPPassword,SAPLanguage
-NEW HANA 1909,100,USERAUG48,welcome@35,EN
+SAPLogOnConnectionName,SAPClient,SAPUserName,SAPPassword,SAPLanguage,SAPLogOutTileCode
+NEW HANA 1909,400,NOVMM6,welcome@55,EN,/nex

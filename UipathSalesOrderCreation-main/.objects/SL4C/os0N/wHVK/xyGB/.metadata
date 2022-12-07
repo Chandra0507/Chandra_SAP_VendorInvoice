@@ -1,0 +1,13 @@
+﻿{
+  "Id": "xyGBQbLqaEK6VegNPrHwbg",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/xyGBQbLqaEK6VegNPrHwbg",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/wHVK-h7-R0qZ644pbh19eg",
+  "Name": "Button Display",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Created": "2022-11-03T06:03:58.0192514Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-03T06:03:58.0192514Z"
+}

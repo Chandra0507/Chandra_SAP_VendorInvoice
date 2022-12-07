@@ -1,0 +1,2 @@
+Tile_Code1,Order_Type,Sales_Organization,Distribution_Channel,Division,Sold_To_Party,Ship_To_Party,Customer_Refernce,Payment_Terms,Material_1,QTY_1,Delivery_Date,Storage_Location,Pricing_Cndtn1,Amount,Pricing_Cndtn2,Pricing_Cndtn3
+VA01,OR,FAST,FA,FA,12001,12001,salesordercreation,1,3183,1,08.12.2022,PA31,PR00,100,KCUS,KMAT

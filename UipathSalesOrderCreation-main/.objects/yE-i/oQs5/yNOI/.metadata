@@ -1,0 +1,12 @@
+﻿{
+  "Id": "yNOILezm2EymV8WGXtUexQ",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/yNOILezm2EymV8WGXtUexQ",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/oQs5JB8hREe6G8k8Ri462g",
+  "Name": "Create Outbound Delivery with Order Reference",
+  "Type": "Screen",
+  "Created": "2022-11-03T09:16:45.756922Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-03T09:16:45.756922Z"
+}

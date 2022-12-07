@@ -1,419 +1,58 @@
-11.11.2022                                                           Dynamic List Display                                                                                                                     1
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Number of Selected Change Documents:  1
-System                                               A4H    Client      100  User   USERAUG48    11.11.2022  14:51:02
+07.12.2022                                              Dynamic List Display                                                                                                       1
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Change Documents for User (4 Change Documents)
 
-Selection Criteria:
-User                                                 I   EQ 13393992
-                                                     I   EQ ABAPJUN14
-                                                     I   EQ ABAPOCT3
-                                                     I   EQ ABAPOCT5
-                                                     I   EQ ADMIN
-From Date                                                   23.08.2022
-To Date                                                     22.10.2022
-From Time                                                   00:00:00
-To Time                                                     23:59:59
-No data has been reorganized for US_USER and US_PASS
-User created                                                X
-Password                                                    X
-User deleted                                                X
-User Type                                                   X
-DBMS User                                                   X
-Administrator lock set                                      X
-Administrator lock released                                 X
-Incorrect logon lock set                                    X
-Incorrect logon lock released                               X
-License Data                                                X
-Validity Period                                             X
-Account Number                                              X
-Security Policy                                             X
-Reference User                                              X
-User Group                                                  X
-Alias                                                       X
-SNC Name                                                    X
-Address Assignmt                                            X
-Person Responsible                                          X
-Roles                                                       X
-Profiles                                                    X
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|User     |Date      |Time    |Changed By|Action                 |Old value |Text|New value                     |Text                                                             |TCode|Start Date|End Date  |
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|User created           |          |    |                              |                                                                 |SU01 |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Initial User Type      |          |    |S                             |Service User                                                     |SU01 |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|User group changed     |          |    |SUPER                         |SUPER                                                            |SU01 |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Password changed       |          |    |New Password  1               |                                                                 |SU01 |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Password status changed|          |    |Production                    |                                                                 |SU01 |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Valid to: changed      |00.00.0000|    |27.12.2022                    |                                                                 |SU01 |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |SAP_NEW                       |New authorization checks                                         |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH660497                    |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604971                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049710                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049711                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049712                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049713                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049714                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049715                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049716                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049717                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049718                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049719                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604972                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049720                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049721                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049722                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049723                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049724                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049725                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049726                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049727                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH66049728                  |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604973                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604974                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604975                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604976                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604977                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604978                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH6604979                   |Profile for role ZSAP_ALL                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-AH660500                    |Profile for role SAP_BR_BUPA_MASTER_SPECIALIST                   |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S7660142                    |Profile for role Z_BR_BPC_EXPERT_MDG                             |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S7660478                    |Profile for role SAP_BR_QUALITY_TECHNICIAN                       |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S76604781                   |Profile for role SAP_BR_QUALITY_TECHNICIAN                       |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S7660479                    |Profile for role SAP_BR_QUALITY_ENGINEER                         |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S76604791                   |Profile for role SAP_BR_QUALITY_ENGINEER                         |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S7660480                    |Profile for role SAP_BR_WAREHOUSE_CLERK                          |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S7660491                    |Profile for role ZSAP_MDGM                                       |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T-S7660492                    |Profile for role ZSAP_MDGM1                                      |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_E5910050                    |Profile for role SAP_MDGM                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_E5910058                    |Profile for role SAP_MDGS                                        |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_EB040246                    |Profile for role SAP_MDGM_DISP_04                                |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_EB040249                    |Profile for role SAP_MDGM_REQ_04                                 |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_EB040251                    |Profile for role SAP_MDGM_SPEC_04                                |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_EB040254                    |Profile for role SAP_MDGM_STEW_04                                |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350024                    |Profile for role SAP_MDGF_ACC_DISP_04                            |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350025                    |Profile for role SAP_MDGF_ACC_REQ_04                             |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350026                    |Profile for role SAP_MDGF_ACC_SPEC_04                            |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350027                    |Profile for role SAP_MDGF_ACC_STEW_04                            |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350028                    |Profile for role SAP_MDGF_CTR_DISP_04                            |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350029                    |Profile for role SAP_MDGF_CTR_REQ_04                             |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350030                    |Profile for role SAP_MDGF_CTR_SPEC_04                            |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350032                    |Profile for role SAP_MDGF_CTR_STEW_04                            |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350039                    |Profile for role SAP_MDGF_CO_DISP_04                             |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350042                    |Profile for role SAP_MDGF_CO_STEW_04                             |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350043                    |Profile for role SAP_MDGF_CO_SPEC_04                             |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Profile added          |          |    |T_V8350044                    |Profile for role SAP_MDGF_CO_REQ_04                              |     |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |/SCMTMS/PROCESS_ADMINISTRATOR |Process Administrator                                            |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_AUDITOR_BA_EC_CS          |AIS - Consolidation                                              |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_AUDITOR_BA_EC_CS_A        |AIS - Consolidation (Authorizations)                             |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AA_ACCOUNTANT          |Asset Accountant                                                 |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AA_ACCOUNTANT_US       |Asset Accountant for USA                                         |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ACADEMIC_ADVISOR       |Academic Advisor                                                 |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ACS_AUDITOR_GR         |Audit Specialist for Greece                                      |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ACS_AUDITOR_IL         |Audit Specialist for Israel                                      |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR          |Administrator                                                    |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR_GRP      |Administrator - Group Reporting                                  |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR_GRP      |Administrator - Group Reporting                                  |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR_HRINFO   |Administrator - HR Info                                          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR_LCM      |Administrator - Enterprise Contract Management                   |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR_RCP_DEV  |Administrator - Recipe Development                               |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR_RFM      |Administrator (Retail)                                           |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMINISTRATOR_RFM      |Administrator (Retail)                                           |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMIN_APR_FICA         |Administrator - Accounts Payable and Receivable (FI-CA)          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ADMIN_JVA              |Joint Venture Accountant - Special Ledger                        |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ALLOCATOR_RETAIL       |Allocator (Retail)                                               |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ANALYTICS_SPECIALIST   |Analytics Specialist                                             |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_APR_ACCOUNTANT_FICA    |Accounts Payable and Receivable Accountant (FI-CA)               |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_APR_MANAGER_FICA       |Accounts Payable and Receivable Manager (FI-CA)                  |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AP_ACCOUNTANT          |Accounts Payable Accountant                                      |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AP_ACCOUNTANT_IOG      |Accounts Payable Accountant (IOG)                                |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AP_MANAGER             |Accounts Payable Manager                                         |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AP_MANAGER_US          |Accounts Payable Manager for USA                                 |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AR_ACCOUNTANT          |Accounts Receivable Accountant                                   |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_AR_MANAGER             |Accounts Receivable Manager                                      |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ASSORT_SPECIALIST_RFM  |Assortment Specialist - Retail                                   |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BATCH_MASTER_SPCLST    |Master Data Specialist - Batch Data                              |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BILLING_CLERK          |Billing Clerk                                                    |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BILLING_SPECIALIST_ISU |Billing Specialist (Utilities)                                   |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BOM_ENGINEER           |BOM Engineer                                                     |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BPC_EXPERT             |Configuration Expert - Business Process Configuration            |SU01 |09.03.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BPC_EXPERT             |Configuration Expert - Business Process Configuration            |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BPC_EXPERT_MDG         |Configuration Expert - Business Process Configuration            |SU01 |09.03.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BPC_EXPERT_MDG         |Configuration Expert - Business Process Configuration            |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BPC_EXPERT_MDG         |Configuration Expert - Business Process Configuration            |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUDGET_RESPONSIBLE     |Budget Responsible - Funds Management                            |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUDGET_SPECIALIST      |Budget Specialist - Funds Management                             |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUPA_MASTER_SPECIALIST |Master Data Specialist - Business Partner Data                   |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUSINESS_ANALYST_GRP   |Business Analyst - Group Reporting                               |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUSINESS_ANALYST_IOG   |Business Analyst (IOG)                                           |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUSINESS_PROCESS_SPEC  |Business Process Specialist                                      |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUSINESS_PROC_SPEC_ESCH|Business Process Specialist - Enterprise Search                  |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_BUYER                  |Strategic Buyer                                                  |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CALIBRATION_TECHNICIAN |Calibration Technician                                           |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CASH_MANAGER           |Cash Manager                                                     |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CASH_MANAGER           |Cash Manager                                                     |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CASH_SPECIALIST        |Cash Management Specialist                                       |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CASH_SPECIALIST_US     |Cash Management Specialist for USA                               |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CAT_MAN_RFM            |Category Manager (Retail)                                        |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CHG_MGMT_COORDINATOR   |Change Management Coordinator                                    |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CHG_MGMT_COORDINATOR   |Change Management Coordinator                                    |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CMMFDOF_TRADER         |Trader - Commodity Derivative Orders                             |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CMMFSA_MD_MANAGER      |Trader - Commodity Derivative Orders                             |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_COLL_SPECIALIST_FICA   |Collections Specialist (FI-CA)                                   |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_COMPL_ENG_FOOD_BEV     |Compliance Engineer - Food and Beverage                          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CONFIG_EXPERT_DATA_MIG |Configuration Expert - Data Migration                            |SU01 |09.03.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CONF_EXPERT_BUS_NET_INT|Configuration Expert - Business Network Integration              |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CONSLDTN_SPECIALIST    |Consolidation Specialist                                         |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CONSLDTN_SPECIALIST    |Consolidation Specialist                                         |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CONTRACT_MANAGER_CCM   |Contract Manager - Settlement Management                         |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CREDIT_CONTROLLER      |Credit Controller                                                |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CSR_TRM                |Customer Service Representative - Tax and Revenue Management     |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CUSTOMER_SALES_MGR     |Sales Manager (Customer Management)                              |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CUSTOMER_SERVICE_DSD   |Customer Service Representative - Visit Management               |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_CUSTOMER_SERVICE_MGR   |Customer Service Manager (Customer Management)                   |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DATA_PRIVACY_SPECIALIST|Data Privacy Specialist                                          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DATA_PRIV_SPEC_CONS    |Data Privacy Specialist - Consent Management                     |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DEFERMENT_ANALYST_IOG  |Deferment Analyst (IOG)                                          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DEMAND_PLANNER_RFM     |Demand Planner (Retail)                                          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DESIGN_ENGINEER        |Design Engineer                                                  |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DEVELOPMENT_MANAGER_DIN|Development Manager - Discrete Industry                          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DG_SAFETY_ADVISOR      |Dangerous Goods Specialist                                       |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_DIVISION_ACCOUNTANT    |Divisional Accountant                                            |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EMPLOYEE               |Employee                                                         |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EMPLOYEE               |Employee                                                         |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EMPLOYEE_EHS_INFO      |Employee - EHS Info                                              |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EMPLOYEE_LEGAL_CONTENT |Employee - Legal Content Management                              |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EMPLOYEE_MAINTENANCE   |Employee                                                         |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EMPLOYEE_PROCUREMENT   |Employee - Procurement                                           |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EMPLOYEE_TRV           |Employee - Travel Info                                           |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ENVIRONMENTAL_MANAGER  |Environmental Manager                                            |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_ENVIRONMENTAL_MANAGER  |Environmental Manager                                            |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EXTERNAL_AUDITOR       |External Auditor                                                 |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EXTERNAL_AUDITOR_GRP   |External Auditor - Group Reporting                               |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EXTERNAL_AUDITOR_GRP   |External Auditor - Group Reporting                               |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_EXT_AUDITOR_APR_FICA   |External Auditor - Accounts Payable and Receivable (FI-CA)       |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_FACULTY_MEMBER         |Faculty Member                                                   |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_FC_ANALYST_PROD_IOG    |Forecast Analyst - Production (IOG)                              |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_FIELD_OPERATOR_IOG     |Field Operator (IOG)                                             |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_FORECAST_MANAGER_IOG   |Forecast Manager (IOG)                                           |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_FORECAST_SPECIALIST_IOG|Forecast Specialist (IOG)                                        |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_FRGHT_CTRC_SPECIALIST  |Contract Specialist - Freight Management                         |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_FRGHT_SETTLEMENT_CLERK |Settlement Clerk - Freight Management                            |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GL_ACCOUNTANT          |General Ledger Accountant                                        |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GL_ACCOUNTANT          |General Ledger Accountant                                        |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GL_ACCOUNTANT          |General Ledger Accountant                                        |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GL_ACCOUNTANT_GRP      |General Ledger Accountant - Group Reporting                      |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GL_ACCOUNTANT_GRP      |General Ledger Accountant - Group Reporting                      |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GL_ACCOUNTANT_US       |General Ledger Accountant for USA                                |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GL_ACCOUNTANT_VE       |General Ledger Accountant for Venezuela                          |SU01 |03.06.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_GRP_ACCOUNTANT         |Group Accountant                                                 |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_HAZMAT_MANAGER         |Hazardous Materials Manager                                      |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_INDUSTRIAL_HYGIENIST   |Industrial Hygienist                                             |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_INTRNAL_SALESREP_SOM   |Internal Sales Representative (SOM)                              |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_INVENTORY_MANAGER      |Inventory Manager                                                |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_MAINTENANCE_PLANNER    |Maintenance Planner                                              |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_MAINTENANCE_PLANNER_RSH|Maintenance Planner - Resource Scheduling                        |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_MAINTENANCE_TECHNICIAN |Maintenance Technician                                           |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_MATL_PLNR_EXT_PROC     |Material Planner - External Procurement                          |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_OPERATION_CLERK_ACM    |Operations Clerk (ACM)                                           |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_OVERHEAD_ACCOUNTANT    |Cost Accountant - Overhead                                       |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_PRODN_PLNR             |Production Planner                                               |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_PROJECTMGR_COMMPRJ     |Project Manager (CPM)                                            |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_QUALITY_ENGINEER       |Quality Engineer                                                 |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_QUALITY_MANAGER        |Quality Manager                                                  |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_QUALITY_TECHNICIAN     |Quality Technician                                               |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_RECEIVING_SPECIALIST   |Receiving Specialist                                             |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_RECON_ACCOUNTANT       |General Ledger Accountant - Intercompany                         |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_SALES_ACCOUNTANT       |Cost Accountant - Sales                                          |SU01 |08.05.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_SERV_REP_T             |Customer Service Representative (Customer Management)            |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_SETTLEMENT_CLERK_ACM   |Settlement Clerk (ACM)                                           |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_SHIPPING_SPECIALIST    |Shipping Specialist                                              |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_SHIP_SPECIALIST_JIT    |Shipping Specialist - Just-In-Time Supply                        |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_BR_WAREHOUSE_CLERK        |Warehouse Clerk                                                  |SU01 |10.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_CA_DMC_MC_USER            |S/4 Migration - Data Transfer                                    |SU01 |17.03.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGA_MENU                 |Master Data Governance Analytics                                 |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_DISP_04             |Master Data Governance for Business Partner: Display             |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_DISP_05             |Master Data Governance for Business Partner: Display             |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_MENU_04             |Master Data Governance for Business Partner: Menu                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_REQ_04              |Master Data Governance for Business Partner: Requester           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_REQ_05              |Master Data Governance for Business Partner: Requester           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_SPEC_04             |Master Data Governance for Business Partner: Specialist          |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_SPEC_05             |Master Data Governance for Business Partner: Specialist          |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_STEW_04             |Master Data Governance for Business Partner: Data Steward        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGBP_STEW_05             |Master Data Governance for Business Partner: Data Steward        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_CL_MENU_04           |Master Data Governance for Customer (ERP Customer UI): Menu      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_DISP                 |Master Data Governance for Customer: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_DISP_03              |Master Data Governance for Customer: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_DISP_04              |Master Data Governance for Customer: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_DISP_05              |Master Data Governance for Customer: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_DISP_06              |Master Data Governance for Customer: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_LCC_MENU_04          |Master Data Governance for Customer (Lean Request UI): Menu      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_LCC_REQ_04           |Master Data Governance for Customer (Lean Request UI): Requester |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_MENU                 |Master Data Governance for Customer: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_MENU_03              |Master Data Governance for Customer: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_MENU_04              |Master Data Governance for Customer: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_REQ                  |Master Data Governance for Customer: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_REQ_03               |Master Data Governance for Customer: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_REQ_04               |Master Data Governance for Customer: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_REQ_05               |Master Data Governance for Customer: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_REQ_06               |Master Data Governance for Customer: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_SPEC                 |Master Data Governance for Customer: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_SPEC_03              |Master Data Governance for Customer: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_SPEC_04              |Master Data Governance for Customer: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_SPEC_05              |Master Data Governance for Customer: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_SPEC_06              |Master Data Governance for Customer: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_STEW                 |Master Data Governance for Customer: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_STEW_03              |Master Data Governance for Customer: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_STEW_04              |Master Data Governance for Customer: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGC_STEW_06              |Master Data Governance for Customer: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGFICA_DISP              |Master Data Governance for Contract Account: Display             |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGFICA_MENU              |Master Data Governance for Contract Account: Menu                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGFICA_MENU_01           |Master Data Governance for Contract Account: Menu                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGFICA_REQ               |Master Data Governance for Contract Account: Requester           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGFICA_SPEC              |Master Data Governance for Contract Account: Specialist          |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGFICA_STEW              |Master Data Governance for Contract Account: Data Steward        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_DISP_04          |Master Data Governance for Financials: Accounting Display        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_DISP_07          |Master Data Governance for Financials: Accounting Display        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_DISP_08          |Master Data Governance for Financials: Accounting Display        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_MENU_04          |Master Data Governance for Financials: Accounting Menu           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_REQ_04           |Master Data Governance for Financials: Accounting Requester      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_REQ_06           |Master Data Governance for Financials: Accounting Requester      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_REQ_07           |Master Data Governance for Financials: Accounting Requester      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_REQ_08           |Master Data Governance for Financials: Accounting Requester      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_SPEC_04          |Master Data Governance for Financials: Accounting Specialist     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_SPEC_07          |Master Data Governance for Financials: Accounting Specialist     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_SPEC_08          |Master Data Governance for Financials: Accounting Specialist     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_STEW_04          |Master Data Governance for Financials: Accounting Data Steward   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_ACC_STEW_08          |Master Data Governance for Financials: Accounting Data Steward   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_DISP_04           |Master Data Governance for Financials: Consolidation Display     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_DISP_07           |Master Data Governance for Financials: Consolidation Display     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_MENU_04           |Master Data Governance for Financials: Consolidation Menu        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_REQ_04            |Master Data Governance for Financials: Consolidation Requester   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_REQ_06            |Master Data Governance for Financials: Consolidation Requester   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_REQ_07            |Master Data Governance for Financials: Consolidation Requester   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_SPEC_04           |Master Data Governance for Financials: Consolidation Specialist  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_SPEC_07           |Master Data Governance for Financials: Consolidation Specialist  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_STEW_04           |Master Data Governance for Financials: Consolidation Data Steward|SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CO_STEW_07           |Master Data Governance for Financials: Consolidation Data Steward|SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_DISP_04          |Master Data Governance for Financials: Controlling Display       |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_DISP_07          |Master Data Governance for Financials: Controlling Display       |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_MENU_04          |Master Data Governance for Financials: Controlling Menu          |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_MENU_05          |Master Data Governance for Financials: Controlling Menu          |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_MENU_SFIN_01     |Master Data Governance for Financials: Controlling Menu          |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_REQ_04           |Master Data Governance for Financials: Controlling Requester     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_REQ_06           |Master Data Governance for Financials: Controlling Requester     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_REQ_07           |Master Data Governance for Financials: Controlling Requester     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_SPEC_04          |Master Data Governance for Financials: Controlling Specialist    |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_SPEC_07          |Master Data Governance for Financials: Controlling Specialist    |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_STEW_04          |Master Data Governance for Financials: Controlling Data Steward  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_CTR_STEW_07          |Master Data Governance for Financials: Controlling Data Steward  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_DISP                 |Master Data Governance for Financials: Display                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_MENU                 |Master Data Governance for Financials: Menu                      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_MENU_03              |Master Data Governance for Financials: Menu                      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_REQ                  |Master Data Governance for Financials: Requester                 |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_SPEC                 |Master Data Governance for Financials: Specialist                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGF_STEW                 |Master Data Governance for Financials: Data Steward              |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM                      |Material Master Data Manager                                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP                 |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP_03              |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP_04              |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP_05              |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP_06              |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP_07              |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP_08              |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_DISP_09              |Master Data Governance for Material: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU                 |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU_03              |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU_04              |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU_05              |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU_06              |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU_07              |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU_08              |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_MENU_09              |Master Data Governance for Material: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ                  |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ_03               |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ_04               |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ_05               |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ_06               |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ_07               |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ_08               |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_REQ_09               |Master Data Governance for Material: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC                 |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC_03              |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC_04              |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC_05              |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC_06              |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC_07              |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC_08              |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_SPEC_09              |Master Data Governance for Material: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW                 |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW_03              |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW_04              |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW_05              |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW_06              |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW_07              |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW_08              |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGM_STEW_09              |Master Data Governance for Material: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS                      |Supplier Master Data Manager                                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_DISP                 |Master Data Governance for Supplier: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_DISP_03              |Master Data Governance for Supplier: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_DISP_04              |Master Data Governance for Supplier: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_DISP_06              |Master Data Governance for Supplier: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_DISP_07              |Master Data Governance for Supplier: Display                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_LVC_MENU_03          |Master Data Governance for Supplier (Lean Request UI): Menu      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_LVC_MENU_04          |Master Data Governance for Supplier (Lean Request UI): Menu      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_LVC_REQ_03           |Master Data Governance for Supplier (Lean Request UI): Requester |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_LVC_REQ_04           |Master Data Governance for Supplier (Lean Request UI): Requester |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_MENU                 |Master Data Governance for Supplier: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_MENU_03              |Master Data Governance for Supplier: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_MENU_04              |Master Data Governance for Supplier: Menu                        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_REQ                  |Master Data Governance for Supplier: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_REQ_03               |Master Data Governance for Supplier: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_REQ_04               |Master Data Governance for Supplier: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_REQ_06               |Master Data Governance for Supplier: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_REQ_07               |Master Data Governance for Supplier: Requester                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_SPEC                 |Master Data Governance for Supplier: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_SPEC_03              |Master Data Governance for Supplier: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_SPEC_04              |Master Data Governance for Supplier: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_SPEC_06              |Master Data Governance for Supplier: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_SPEC_07              |Master Data Governance for Supplier: Specialist                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_STEW                 |Master Data Governance for Supplier: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_STEW_03              |Master Data Governance for Supplier: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_STEW_04              |Master Data Governance for Supplier: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_STEW_07              |Master Data Governance for Supplier: Data Steward                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGS_VL_MENU_04           |Master Data Governance for Supplier (ERP Vendor UI): Menu        |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_FND_SAMPLE_SF        |MDG Custom Objects - Flight Data Model                           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_FND_SAMPLE_SF_03     |MDG Custom Objects - Flight Data Model                           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_FND_SAMPLE_SF_04     |MDG Custom Objects - Flight Data Model                           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_FND_SAMPLE_SF_05     |MDG Custom Objects - Flight Data Model MDG 8.0                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_FND_SAMPLE_SF_06     |MDG Custom Objects - Flight Data Model MDG 9.1                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_MENU                 |Master Data Governance for Custom Objects: Menu                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_MENU_04              |Master Data Governance for Custom Objects: Menu                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDGX_MENU_05              |Master Data Governance for Custom Objects: Menu 9.1              |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_ACC_APP               |Role for Sap MDG Account oData service                           |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_ADMIN                 |Master Data Governance: Administrator                            |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_APPROVE_CR            |SAP Fiori : Role for mdg approve cr oData service                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_BCR_APPROVER_T        |Master Data Approver (MDG) - Apps                                |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_BCR_MYREQUESTS        |MDG Fiori My Requests                                            |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_BCR_REQUESTOR_T       |Master Data Requestor (MDG) - Apps                               |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_CTR_APP               |Role for Sap MDG Contorlling oData service                       |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_CUSTOMER_APP          |SAP Firoi : Customer approval                                    |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_EDITCUST_APP          |SAP Fiori: Edit Customer                                         |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_FINANCIALS_APP        |SAP Fiori : Approve Change Requests                              |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_MATERIAL_APP          |SAP Fiori : Material Approval                                    |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_MY_REQ_APP            |SAP Fiori: Track My Requests                                     |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_REQ_BP_APP            |SAP Fiori: Request Business Partner                              |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_REQ_CC_APP            |SAP Fiori: Request Cost Center                                   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_REQ_CUST_APP          |SAP Fiori: Request Customer                                      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_REQ_MAT_APP           |SAP Fiori: Request Material                                      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_REQ_PC_APP            |SAP Fiori: Request Profit Center                                 |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_REQ_SUPPL_APP         |SAP Fiori: Request Supplier                                      |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_SUPPLIER_APP          |SAP Fiori : Supplier approval                                    |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_TCR_T                 |SAP Role for MDG - Transactional Apps                            |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |SAP_MDG_WF_ADM                |Master Data Governance: Authorizations for Workflow Batch User   |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |ZSAP_ALL                      |                                                                 |SU01 |05.08.2022|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |ZSAP_MDGM                     |TEST ROLE FIORI                                                  |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |ZSAP_MDGM1                    |TEST FIORI CATALOG                                               |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |ZSAP_MDG_BC_MATERIAL_DATA     |MATERIAL_DATA                                                    |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Role added             |          |    |Z_BR_BPC_EXPERT_MDG           |Configuration Expert - Business Process Configuration            |SU01 |24.10.2020|31.12.9999|
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Person number changed  |          |    |30714                         |                                                                 |SU01 |          |          |
-|ABAPJUN14|23.09.2022|22:16:18|USERADMIN1|Address number changed |          |    |23546                         |                                                                 |SU01 |          |          |
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System ( Client ) A4H ( 400 ) Checked by NOVMM7 Checked on 07.12.2022 13:48:36
+Status No data has been reorganized for US_USER and US_PASS
+Criteria for Standard Selection
+ - User                          I EQ RAJU
+ - User                          I EQ S4C!12
+ - User                          I EQ S4TEST12
+ - User                          I EQ S4TEST4
+ - User                          I EQ S4TEST9
+ - User                          I EQ TMSADM
+ - From Date                          23.08.2022
+ - From Time                          00:00:00
+ - To Date                            22.11.2022
+ - To Time                            23:59:59
+Selection by User Attributs
+ - User Created                       X
+ - User Deleted                       X
+ - Password                           X
+ - User Type                          X
+ - Security Policy                    X
+ - Administrator lock set             X
+ - Incorrect logon lock set           X
+ - Administrator lock release         X
+ - Incorrect logon lock released      X
+ - Validity Period                    X
+ - Account Number                     X
+ - License Data                       X
+ - Reference User                     X
+ - User Group                         X
+ - Address Assignment                 X
+ - Alias                              X
+ - SNC Name                           X
+ - Person Responsible                 X
+ - User UUID                          X
+Selection Criteria for Roles/Profiles
+ - Search for Roles                   X
+ - Search for Profiles                X
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|User  |Date      |Time    |Changed By|Action                 |Old value      |Active Old|Text|New value      |Active New|Text                         |TCode|Start Date|End Date  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|S4C!12|26.09.2022|20:40:01|SAP*      |User created           |               |          |    |               |          |                             |SU01 |          |          |
+|S4C!12|26.09.2022|20:40:01|SAP*      |Initial User Type      |               |          |    |A              |          |Dialog User                  |SU01 |          |          |
+|S4C!12|26.09.2022|20:40:01|SAP*      |Password changed       |               |          |    |New Password  1|          |                             |SU01 |          |          |
+|S4C!12|26.09.2022|20:40:01|SAP*      |Password status changed|               |          |    |Initial        |          |                             |SU01 |          |          |
+|S4C!12|26.09.2022|20:40:01|SAP*      |Profile added          |               |          |    |SAP_ALL        |          |All SAP System authorizations|SU01 |          |          |
+|S4C!12|26.09.2022|20:40:01|SAP*      |Profile added          |               |          |    |SAP_NEW        |          |New authorization checks     |SU01 |          |          |
+|S4C!12|26.09.2022|20:40:01|SAP*      |Person number changed  |               |          |    |27640          |          |                             |SU01 |          |          |
+|S4C!12|26.09.2022|20:40:01|SAP*      |Address number changed |               |          |    |23620          |          |                             |SU01 |          |          |
+|S4C!12|26.09.2022|20:41:19|S4C!12    |Password changed       |New Password  1|          |    |New Password  2|          |                             |KRNL |          |          |
+|S4C!12|26.09.2022|20:41:19|S4C!12    |Password status changed|Initial        |          |    |Production     |          |                             |KRNL |          |          |
+|S4C!12|02.10.2022|14:22:07|SAP*      |Password changed       |New Password  2|          |    |New Password  3|          |                             |SU01 |          |          |
+|S4C!12|02.10.2022|14:22:07|SAP*      |Password status changed|Production     |          |    |Initial        |          |                             |SU01 |          |          |
+|S4C!12|02.10.2022|14:22:41|S4C!12    |Password changed       |New Password  3|          |    |New Password  4|          |                             |KRNL |          |          |
+|S4C!12|02.10.2022|14:22:41|S4C!12    |Password status changed|Initial        |          |    |Production     |          |                             |KRNL |          |          |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

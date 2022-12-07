@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="E2AIU1Bpu0udo_M4bikogg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="992, 313, 35, 29" DesignTimeScaleFactor="1.5" ElementType="Icon" FriendlyName="'Button Display'" FullSelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/btnBT_OUTPUT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/btnBT_OUTPUT' /&gt;" Guid="247b590f-94de-48fa-8c9a-9917dedf6f00" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAhCAYAAABa+rIoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFUSURBVFhH5ZU9bsJAEEadY3EfrpXKLinoOYJbV65SRDIFEhJFNgKRyX5ezQBmDXh3yQ7Kkz7tj2308IztgiyH44+Eybn3fTj2KcZOyLkHMVBUVdUvMJZlmT3wYApsAB5zwx59Wc/ljDHZAw/pOV5Mlms7env/uJl567nuTl5CDkTKdbQ0W5qvttTU3UlmvaFZhBwT3nNXcp9J5aSsQJMcxEQuTVn/kRxIIOfWqXsOJOg5t04tZ7isIF4OrxJb4oWVrOPkICZymMTKueyosYJNq0LO/2XgxMgBlXJMeM89KewjZQXjcrbJPXclPMM+vUzvYcVE7nZZX0AupH+GwbvwUTmgUo5R2XPA7LU+EFZM5DAZl3NZruwPLzbUeI7dj/uDs3rnOXaZcLmruzAtU+SASjnmgZ7727DPF5cVaJKDmMhhglFLRI4nCKNlT+SY4Qkgzx7RL7vu/4QgUT1iAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8cea7f16f6e07d0f2dbf6739a4c65b5d.png" xmlns="">0i17Kuf1en0GRheZpbmhndA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

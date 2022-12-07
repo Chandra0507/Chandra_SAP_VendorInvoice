@@ -1,0 +1,14 @@
+﻿{
+  "Id": "5Tohx8NguUO7c2ocTQ-l0g",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/5Tohx8NguUO7c2ocTQ-l0g",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/ZAWWa2Cb4UiogV09gVWCUA",
+  "Name": "Select Menu Item 'TabStrip  TAXI_TABSTRIP...'",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2022-11-07T05:45:36.0947054Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-07T05:45:36.0947054Z"
+}

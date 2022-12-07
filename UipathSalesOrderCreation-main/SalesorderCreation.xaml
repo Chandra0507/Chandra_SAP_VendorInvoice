@@ -1,0 +1,1183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SalesorderCreation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="InputData" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="Shipping_Point" Type="OutArgument(x:String)" />
+    <x:Property Name="sales" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>780.6666666666666,12435.333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SalesorderCreation_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="98">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="59">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SalesorderCreation" sap:VirtualizedContainerService.HintSize="790.6666666666666,12370.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="SAP" />
+      <Variable x:TypeArguments="x:String" Name="SAPApplication" />
+      <Variable x:TypeArguments="x:Int32" Name="WaitPeriod" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SAP Easy Access" sap:VirtualizedContainerService.HintSize="748.6666666666666,12280.666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="714.6666666666666,11974.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="672.6666666666666,11882" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[InputData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="634,11634" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Input" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,11506" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="558,170.66666666666666" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[Input.Item(&quot;Tile_Code1&quot;).ToString]">
+                          <ucas:CallTransaction.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1df536f4-d12f-4505-9ce6-648e089c0f96" InformativeScreenshot="0af026017107e4e7d0724b7b0502abd9">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ucas:CallTransaction.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ucas:CallTransaction>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Sales'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Order_Type&quot;).ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="284, 285, 83, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Sales'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-AUART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-AUART' /&gt;" Guid="4e07b0b7-6f0b-4eb2-ae4d-461025ebfd61" InformativeScreenshot="983d0e95cb372210ad8368662054699a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Sales Documents' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Sales'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Sales_Organization&quot;).ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="284, 372, 59, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Sales'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-VKORG' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-VKORG' /&gt;" Guid="416b8390-e58c-472e-abc9-f7ea252c4702" InformativeScreenshot="ca51a3c35453a3031c5f3fe1be0bbd6c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Sales Documents' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Distribution'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Distribution_Channel&quot;).ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="284, 401, 35, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Distribution'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-VTWEG' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-VTWEG' /&gt;" Guid="3b58b90b-a38a-4953-a93f-b6516de9c98b" InformativeScreenshot="1e12abae914fe43eb1bd80b81deb0ba2.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Sales Documents' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Division'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Division&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="284, 430, 35, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Division'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-SPART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-SPART' /&gt;" Guid="ac7dedc9-9707-4c76-b188-957690e04c38" InformativeScreenshot="65daa858bf85f70ae0c9488bd5123b8f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Sales Documents' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="558,62" sap2010:WorkflowViewState.IdRef="Delay_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Sold-To Party'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Sold_To_Party&quot;).ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="224, 256, 155, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Sold-To Party'" FullSelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/subPART-SUB:SAPMV45A:4701/ctxtKUAGV-KUNNR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/subPART-SUB:SAPMV45A:4701/ctxtKUAGV-KUNNR' /&gt;" Guid="b0741c6f-242e-4ed7-8f80-557582828010" InformativeScreenshot="98127ecb54601315b6f29817477e9b8d.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Ship-to party'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Ship_To_Party&quot;).ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="224, 285, 131, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Ship-to party'" FullSelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/subPART-SUB:SAPMV45A:4701/ctxtKUWEV-KUNNR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/subPART-SUB:SAPMV45A:4701/ctxtKUWEV-KUNNR' /&gt;" Guid="9632f1db-af2b-4305-a7cf-e8cefa064a71" InformativeScreenshot="11ae8dc88e27405772c41ed0bcbdd405.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="558,62" sap2010:WorkflowViewState.IdRef="Delay_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Customer'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Customer_Refernce&quot;).ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="224, 314, 275, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Customer'" FullSelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/txtVBKD-BSTKD' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUBSCREEN_HEADER:SAPMV45A:4021/txtVBKD-BSTKD' /&gt;" Guid="f375f724-e01c-4754-bd9a-3b0c4a74615f" InformativeScreenshot="335fdbb2c4f9aa5d7bb8e1918ba3686b.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_18">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,321.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Terms'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Payment_Terms&quot;).ToString]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="236, 546, 59, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Terms'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/ssubHEADER_FRAME:SAPMV45A:4440/ctxtVBKD-ZTERM' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/ssubHEADER_FRAME:SAPMV45A:4440/ctxtVBKD-ZTERM' /&gt;" Guid="6246fe8e-b72a-4397-9e40-b85af94fbded" InformativeScreenshot="875dc6322f5a712b42dd6ad4dc83b41d.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                </uix:NTypeInto.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NTypeInto>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_19">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Material'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Material_1&quot;).ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="142, 748, 486, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Material'" FullSelectorArgument="&lt;sap colTooltip='Material' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Material' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' /&gt;" Guid="bf0e676a-8652-40cb-87f3-266e6f7dcdc5" InformativeScreenshot="547ccb570b393d682c3c17a8c583d003.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Order Quantity'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="558,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;QTY_1&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="828, 748, 234, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Order Quantity'" FullSelectorArgument="&lt;sap colTooltip='Order Quantity' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Order Quantity' id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\01/ssubSUBSCREEN_BODY:SAPMV45A:4400/subSUBSCREEN_TC:SAPMV45A:4900/tblSAPMV45ATCTRL_U_ERF_AUFTRAG' /&gt;" Guid="7124b45a-698c-48e2-92a7-2b0b9155b546" InformativeScreenshot="a0bc0dc78a009dfa81008b021d775408.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Button Continue (Enter)'" sap:VirtualizedContainerService.HintSize="558,168" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="644, 190, 41, 32" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Continue (Enter)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="a33a0dc9-0134-4df0-9934-b50a18e863e6" InformativeScreenshot="c8b3b1df134e520f3e25d8450a8f308a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="558,62.666666666666664" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="540.6666666666666,1394.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="PopUpHandling" sap:VirtualizedContainerService.HintSize="498.6666666666667,399.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:Boolean" Name="elemExist" />
+                                  <Variable x:TypeArguments="x:String" Name="SO" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[WaitPeriod]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not elemExist and WaitPeriod &lt;120]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="338,62.666666666666664" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                                  <ui:InterruptibleDoWhile.Body>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,456.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:UiElementExists DisplayName="Element Exists 'saplogon.exe  Informati...'" Exists="[elemExist]" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                                        <ui:UiElementExists.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="0318319d-0a58-4494-ae98-314fdfd8d706" InformativeScreenshot="56804c5ca83687cdb51ca88b7d970c83">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:UiElementExists.Target>
+                                      </ui:UiElementExists>
+                                      <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="358,98.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                                      <Assign sap:VirtualizedContainerService.HintSize="358,72" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[WaitPeriod]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[WaitPeriod+1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:InterruptibleDoWhile.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:InterruptibleDoWhile>
+                                <If Condition="[elemExist]" sap:VirtualizedContainerService.HintSize="338,62.666666666666664" sap2010:WorkflowViewState.IdRef="If_2">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If.Then>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Button Continue (Enter)'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="644, 190, 41, 32" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Continue (Enter)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="a33a0dc9-0134-4df0-9934-b50a18e863e6" InformativeScreenshot="c8b3b1df134e520f3e25d8450a8f308a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </If.Then>
+                                </If>
+                              </Sequence>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <Sequence DisplayName="Item OverView" sap:VirtualizedContainerService.HintSize="558,8642" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="elemExist" />
+                            <Variable x:TypeArguments="s:String[]" Name="SalesOrder" />
+                            <Variable x:TypeArguments="x:String" Name="SalesNo" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Item Overview'" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="106, 374, 157, 21" DesignTimeScaleFactor="1.5" FriendlyName="'Item Overview'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\02' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\02' check:text='Item Overview' /&gt;" Guid="d8953353-6321-4088-a455-b08ef0f13adb" InformativeScreenshot="8ab08008413311765829275c1bef25ee.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create  ORDER: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Button Display'" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="32, 487, 35, 29" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Display'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4401/subSUBSCREEN_TC:SAPMV45A:4900/subSUBSCREEN_BUTTONS:SAPMV45A:4050/btnBT_ITEM' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4401/subSUBSCREEN_TC:SAPMV45A:4900/subSUBSCREEN_BUTTONS:SAPMV45A:4050/btnBT_ITEM' /&gt;" Guid="3e95a72b-4897-4632-a519-b4c811877495" InformativeScreenshot="2258537c145101c87a3fdcbd5fd16932.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Overview' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NSelectItem DisplayName="Select Item 'Select Menu Item 'TabStrip  TAXI_TABSTRIP...''" sap:VirtualizedContainerService.HintSize="496,167.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Shipping" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="14">
+                                <x:String>Sales A</x:String>
+                                <x:String>Sales B</x:String>
+                                <x:String>Shipping</x:String>
+                                <x:String>Billing Document</x:String>
+                                <x:String>Conditions</x:String>
+                                <x:String>Account Assignment</x:String>
+                                <x:String>Schedule lines</x:String>
+                                <x:String>Partner</x:String>
+                                <x:String>Texts</x:String>
+                                <x:String>Order Data</x:String>
+                                <x:String>Status</x:String>
+                                <x:String>Structure</x:String>
+                                <x:String>Additional Data A</x:String>
+                                <x:String>Additional Data B</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable ContentHash="FlhhqaUPCkyBU5TV57MfTw" DesignTimeRectangle="0, 0, 0, 0" FriendlyName="'Select Menu Item 'TabStrip  TAXI_TABSTRIP...''" FullSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create  SS ORDER: Item Data' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM' /&gt;" Guid="eab613cf-2946-47ba-abaa-8a8bf735d497" InformativeScreenshot="03b0aee586e1475a9c643437bdb0de1a.png" Reference="ZE59Q5W9PU-Hg-VHQ0Ritg/5Tohx8NguUO7c2ocTQ-l0g" SearchSteps="Selector" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,152.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Shipping'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="358,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="PA32" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="260, 575, 59, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Shipping'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\03/ssubSUBSCREEN_BODY:SAPMV45A:4452/ctxtVBAP-VSTEL' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\03/ssubSUBSCREEN_BODY:SAPMV45A:4452/ctxtVBAP-VSTEL' /&gt;" Guid="c37a74ad-c356-4241-a167-dddea09c7e34" InformativeScreenshot="a266b751c1403e9ad093da2228c87a65.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_21">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NGetText DisplayName="Get Text 'PA32'" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" TextString="[Shipping_Point]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="260, 575, 59, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'PA32'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\03/ssubSUBSCREEN_BODY:SAPMV45A:4452/ctxtVBAP-VSTEL' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\03/ssubSUBSCREEN_BODY:SAPMV45A:4452/ctxtVBAP-VSTEL' /&gt;" Guid="8e8d7e14-267b-4f6a-99f2-2f96ba26d0b6" InformativeScreenshot="74b4c26f4841e9a5d4644161a6545d32.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Change Standard order 720: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NGetText.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NGetText>
+                          <uix:NSelectItem DisplayName="Select Item 'Select Menu Item 'TabStrip  TAXI_TABSTRIP...''" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Conditions" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="14">
+                                <x:String>Sales A</x:String>
+                                <x:String>Sales B</x:String>
+                                <x:String>Shipping</x:String>
+                                <x:String>Billing Document</x:String>
+                                <x:String>Conditions</x:String>
+                                <x:String>Account Assignment</x:String>
+                                <x:String>Schedule lines</x:String>
+                                <x:String>Partner</x:String>
+                                <x:String>Texts</x:String>
+                                <x:String>Order Data</x:String>
+                                <x:String>Status</x:String>
+                                <x:String>Structure</x:String>
+                                <x:String>Additional Data A</x:String>
+                                <x:String>Additional Data B</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable ContentHash="FlhhqaUPCkyBU5TV57MfTw" DesignTimeRectangle="0, 0, 0, 0" FriendlyName="'Select Menu Item 'TabStrip  TAXI_TABSTRIP...''" FullSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create  SS ORDER: Item Data' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM' /&gt;" Guid="eab613cf-2946-47ba-abaa-8a8bf735d497" InformativeScreenshot="03b0aee586e1475a9c643437bdb0de1a.png" Reference="ZE59Q5W9PU-Hg-VHQ0Ritg/5Tohx8NguUO7c2ocTQ-l0g" SearchSteps="Selector" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Button Insert Row'" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="68, 487, 35, 29" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Insert Row'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/subSUBSCREEN_PUSHBUTTONS:SAPLV69A:1000/btnBT_KOAN' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/subSUBSCREEN_PUSHBUTTONS:SAPLV69A:1000/btnBT_KOAN' /&gt;" Guid="7771b8d8-2285-4af5-afd2-e0f9f199ebb7" InformativeScreenshot="87f2bdb7fc694ae557e652134eb2511f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField CnTy'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[input.Item(&quot;Pricing_Cndtn1&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="106, 602, 78, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField CnTy'" FullSelectorArgument="&lt;sap colTooltip='Condition Type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='12' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Condition Type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;" Guid="629c706b-d16b-4cb6-9ca0-60f4bc232bac" InformativeScreenshot="fd15127043eb3c2967bff49ff8ae69ab.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,98.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_22" />
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Amount&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="408, 602, 198, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Amount'" FullSelectorArgument="&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='12' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;" Guid="2542dc50-3c84-4792-bd20-53437d3c0cc1" InformativeScreenshot="48692393942dbed26f2fcb5c8aa53828.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Button Insert Row'" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="68, 487, 35, 29" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Insert Row'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/subSUBSCREEN_PUSHBUTTONS:SAPLV69A:1000/btnBT_KOAN' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/subSUBSCREEN_PUSHBUTTONS:SAPLV69A:1000/btnBT_KOAN' /&gt;" Guid="7771b8d8-2285-4af5-afd2-e0f9f199ebb7" InformativeScreenshot="87f2bdb7fc694ae557e652134eb2511f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField CnTy'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Pricing_Cndtn2&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="106, 602, 78, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField CnTy'" FullSelectorArgument="&lt;sap colTooltip='Condition Type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='12' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Condition Type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;" Guid="629c706b-d16b-4cb6-9ca0-60f4bc232bac" InformativeScreenshot="fd15127043eb3c2967bff49ff8ae69ab.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,98.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_23" />
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Amount&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="408, 602, 198, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Amount'" FullSelectorArgument="&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='12' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;" Guid="2542dc50-3c84-4792-bd20-53437d3c0cc1" InformativeScreenshot="48692393942dbed26f2fcb5c8aa53828.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Button Insert Row'" sap:VirtualizedContainerService.HintSize="496,168" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="68, 487, 35, 29" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Insert Row'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/subSUBSCREEN_PUSHBUTTONS:SAPLV69A:1000/btnBT_KOAN' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/subSUBSCREEN_PUSHBUTTONS:SAPLV69A:1000/btnBT_KOAN' /&gt;" Guid="7771b8d8-2285-4af5-afd2-e0f9f199ebb7" InformativeScreenshot="87f2bdb7fc694ae557e652134eb2511f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField CnTy'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_27" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Pricing_Cndtn3&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="106, 602, 78, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField CnTy'" FullSelectorArgument="&lt;sap colTooltip='Condition Type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='13' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Condition Type' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;" Guid="2d0127b7-53db-45d7-87db-f276c37fedf6" InformativeScreenshot="5b9a6c3805155db119ccf8c97c80f62b.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,98.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_24" />
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Amount&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="408, 602, 198, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Amount'" FullSelectorArgument="&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' tableRow='12' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Amount' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\05/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN' /&gt;" Guid="2542dc50-3c84-4792-bd20-53437d3c0cc1" InformativeScreenshot="48692393942dbed26f2fcb5c8aa53828.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62.666666666666664" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,321.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Storage'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Storage_Location&quot;).ToString]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="764, 546, 83, 27" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'CTextField Storage'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\03/ssubSUBSCREEN_BODY:SAPMV45A:4452/ctxtVBAP-LGORT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\03/ssubSUBSCREEN_BODY:SAPMV45A:4452/ctxtVBAP-LGORT' /&gt;" Guid="0eff382d-2dc1-4691-ac38-4f9888a28491" InformativeScreenshot="7165fd95741b00f4f45c0171d7456a47.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Change Standard order 605: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62.666666666666664" sap2010:WorkflowViewState.IdRef="Delay_17">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NSelectItem DisplayName="Select Item 'Select Menu Item 'TabStrip  TAXI_TABSTRIP...''" sap:VirtualizedContainerService.HintSize="496,167.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Schedule lines" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="14">
+                                <x:String>Sales A</x:String>
+                                <x:String>Sales B</x:String>
+                                <x:String>Shipping</x:String>
+                                <x:String>Billing Document</x:String>
+                                <x:String>Conditions</x:String>
+                                <x:String>Account Assignment</x:String>
+                                <x:String>Schedule lines</x:String>
+                                <x:String>Partner</x:String>
+                                <x:String>Texts</x:String>
+                                <x:String>Order Data</x:String>
+                                <x:String>Status</x:String>
+                                <x:String>Structure</x:String>
+                                <x:String>Additional Data A</x:String>
+                                <x:String>Additional Data B</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable ContentHash="FlhhqaUPCkyBU5TV57MfTw" DesignTimeRectangle="0, 0, 0, 0" FriendlyName="'Select Menu Item 'TabStrip  TAXI_TABSTRIP...''" FullSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create  SS ORDER: Item Data' /&gt;&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM' /&gt;" Guid="eab613cf-2946-47ba-abaa-8a8bf735d497" InformativeScreenshot="03b0aee586e1475a9c643437bdb0de1a.png" Reference="ZE59Q5W9PU-Hg-VHQ0Ritg/5Tohx8NguUO7c2ocTQ-l0g" SearchSteps="Selector" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,260" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button  Continue (Enter)'" sap:VirtualizedContainerService.HintSize="358,170" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_4" Item="Continue   (Enter)">
+                                  <ucas:ClickToolbarButton.Items>
+                                    <scg:List x:TypeArguments="x:String" Capacity="4">
+                                      <x:String xml:space="preserve">Continue   (Enter)</x:String>
+                                      <x:String xml:space="preserve">Help   (F1)</x:String>
+                                    </scg:List>
+                                  </ucas:ClickToolbarButton.Items>
+                                  <ucas:ClickToolbarButton.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfa0c531-e5e8-4533-9e88-030839e8b9dc" InformativeScreenshot="97ba856d7be802941c804fb6c8b08b15" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ucas:ClickToolbarButton.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ucas:ClickToolbarButton>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '03.11.2022'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="496,228.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Delivery_Date&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="82, 574, 126, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'03.11.2022'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\07/ssubSUBSCREEN_BODY:SAPMV45A:4500/tblSAPMV45ATCTRL_PEIN' tableCol='1' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\07/ssubSUBSCREEN_BODY:SAPMV45A:4500/tblSAPMV45ATCTRL_PEIN' /&gt;" Guid="f016fc9c-b438-4d12-aed4-bb8f28dd6f1f" InformativeScreenshot="417082dbe73bac9b0a7879d29319637e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Delay_14">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TextField Confirmed Qty'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,228.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;QTY_1&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="631, 574, 210, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Confirmed Qty'" FullSelectorArgument="&lt;sap colTooltip='Confirmed Quantity' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\07/ssubSUBSCREEN_BODY:SAPMV45A:4500/tblSAPMV45ATCTRL_PEIN' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Confirmed Quantity' id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\07/ssubSUBSCREEN_BODY:SAPMV45A:4500/tblSAPMV45ATCTRL_PEIN' /&gt;" Guid="0d0aef87-6ea4-45fc-958a-950038d00672" InformativeScreenshot="d8354cd176c6ab7a9aa3805973d0f0a1.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Delay_20">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,152.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Shipping'" sap:VirtualizedContainerService.HintSize="358,62.666666666666664" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="476, 487, 203, 29" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Shipping'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\07/ssubSUBSCREEN_BODY:SAPMV45A:4500/btnP0_EID2' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_ITEM/tabpT\07/ssubSUBSCREEN_BODY:SAPMV45A:4500/btnP0_EID2' check:text='Shipping' /&gt;" Guid="2c1332de-c813-4d7c-be5a-af0e211565e3" InformativeScreenshot="48763772526664ef83fc2025cd0bc704.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Item Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NClick>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,152.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button  Continue (Enter)'" sap:VirtualizedContainerService.HintSize="358,62.666666666666664" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Continue   (Enter)">
+                                  <ucas:ClickToolbarButton.Items>
+                                    <scg:List x:TypeArguments="x:String" Capacity="4">
+                                      <x:String xml:space="preserve">Continue   (Enter)</x:String>
+                                      <x:String xml:space="preserve">Help   (F1)</x:String>
+                                    </scg:List>
+                                  </ucas:ClickToolbarButton.Items>
+                                  <ucas:ClickToolbarButton.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfa0c531-e5e8-4533-9e88-030839e8b9dc" InformativeScreenshot="97ba856d7be802941c804fb6c8b08b15" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ucas:ClickToolbarButton.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ucas:ClickToolbarButton>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,152" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Goods'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Delivery_Date&quot;).ToString]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="344, 459, 131, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Goods'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-WADAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-WADAT' /&gt;" Guid="d1bb72ac-9508-4fa0-ba5a-5cc69c62ffe7" InformativeScreenshot="556829a9812d3ab009c483940c57e823.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Schedule Line Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Delay_15">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,318.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Loading Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,228.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Delivery_Date&quot;).ToString]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="344, 488, 131, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Loading Date'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-LDDAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-LDDAT' /&gt;" Guid="95e3c44c-5d5b-44ec-bb83-b4c09db19b76" InformativeScreenshot="ae112b6dd0e23bd87c3472500f602a46.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Schedule Line Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Delay_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,152" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Material'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,62" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Delivery_Date&quot;).ToString]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="344, 517, 131, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Material'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-MBDAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-MBDAT' /&gt;" Guid="d9fc815f-0164-4901-adad-b403ec02e8da" InformativeScreenshot="b29b1d2b85a5bb159cd15e9d3e53fadc.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Schedule Line Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Delay_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,321.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Transportati…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Text="[Input.Item(&quot;Delivery_Date&quot;).ToString]" Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="344, 546, 131, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Transportati…'" FullSelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-TDDAT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTAXI_TABSTRIP_SHEDLINE/tabpT\02/ssubSUBSCREEN_BODY:SAPMV45A:4552/ctxtVBEP-TDDAT' /&gt;" Guid="c3664ddf-3410-4299-be79-6136300a866c" InformativeScreenshot="b28c4f3d97cbb050732c1c11951ca768.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard order: Schedule Line Data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NTypeInto>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Delay_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NSelectItem DisplayName="Select Item 'BackButton'" sap:VirtualizedContainerService.HintSize="496,167.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Back   (F3)" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="10">
+                                <x:String>Enter</x:String>
+                                <x:String>Close Command Field</x:String>
+                                <x:String xml:space="preserve">Save   (Ctrl+S)</x:String>
+                                <x:String xml:space="preserve">Back   (F3)</x:String>
+                                <x:String xml:space="preserve">Exit   (Shift+F3)</x:String>
+                                <x:String xml:space="preserve">Cancel   (F12)</x:String>
+                                <x:String>Creates New Session</x:String>
+                                <x:String>Generates a Shortcut</x:String>
+                                <x:String xml:space="preserve">Help   (F1)</x:String>
+                                <x:String>Customize Local Layout (Alt+F12)</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable ContentHash="6Qzq8tbqK0i7iuM1cdUarA" DesignTimeRectangle="0, 0, 0, 0" FriendlyName="'BackButton'" FullSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create  SS ORDER: Schedule Line Data' /&gt;&lt;sap id='tbar[0]' /&gt;" Guid="47c5b9f2-aed2-44df-82d4-3a03524dea51" InformativeScreenshot="4ebcfc7a9bc9a9799a05d2582448813c.png" Reference="ZE59Q5W9PU-Hg-VHQ0Ritg/AbC0tOYYT06sA5lot3jljg" SearchSteps="Selector" />
+                            </uix:NSelectItem.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NSelectItem>
+                          <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button  Continue (Enter)'" sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_2" Item="Continue   (Enter)">
+                            <ucas:ClickToolbarButton.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="4">
+                                <x:String xml:space="preserve">Continue   (Enter)</x:String>
+                                <x:String xml:space="preserve">Help   (F1)</x:String>
+                              </scg:List>
+                            </ucas:ClickToolbarButton.Items>
+                            <ucas:ClickToolbarButton.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfa0c531-e5e8-4533-9e88-030839e8b9dc" InformativeScreenshot="97ba856d7be802941c804fb6c8b08b15" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Information' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ucas:ClickToolbarButton.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ucas:ClickToolbarButton>
+                          <uix:NSelectItem DisplayName="Select Item 'BackButton'" sap:VirtualizedContainerService.HintSize="496,167.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="Save   (Ctrl+S)" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="10">
+                                <x:String>Enter</x:String>
+                                <x:String>Close Command Field</x:String>
+                                <x:String xml:space="preserve">Save   (Ctrl+S)</x:String>
+                                <x:String xml:space="preserve">Back   (F3)</x:String>
+                                <x:String xml:space="preserve">Exit   (Shift+F3)</x:String>
+                                <x:String xml:space="preserve">Cancel   (F12)</x:String>
+                                <x:String>Creates New Session</x:String>
+                                <x:String>Generates a Shortcut</x:String>
+                                <x:String xml:space="preserve">Help   (F1)</x:String>
+                                <x:String>Customize Local Layout (Alt+F12)</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable ContentHash="6Qzq8tbqK0i7iuM1cdUarA" DesignTimeRectangle="0, 0, 0, 0" FriendlyName="'BackButton'" FullSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create  SS ORDER: Schedule Line Data' /&gt;&lt;sap id='tbar[0]' /&gt;" Guid="47c5b9f2-aed2-44df-82d4-3a03524dea51" InformativeScreenshot="4ebcfc7a9bc9a9799a05d2582448813c.png" Reference="ZE59Q5W9PU-Hg-VHQ0Ritg/AbC0tOYYT06sA5lot3jljg" SearchSteps="Selector" />
+                            </uix:NSelectItem.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NSelectItem>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="496,167.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92399abb-42c4-41f5-872a-11f3501fff0e" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="6, 165, 251, 29" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;sap id='usr/btnSPOP-VAROPTION1' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/btnSPOP-VAROPTION1' check:text='Save' /&gt;" Guid="bec94213-bdb0-4a90-943f-b48ccf46689e" InformativeScreenshot="e424caac249bc9485fd2619d7311556f.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Save Incomplete Document' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="Screenshots\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="496,253.33333333333334" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" Version="V3" />
+                          <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'StatusPane ORDER'" sap:VirtualizedContainerService.HintSize="496,278" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageData="[SalesOrder]" MessageText="[SalesNo]">
+                            <ucas:ReadStatusbar.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb64e12c-6173-4638-a71a-ca6dd0c28226" InformativeScreenshot="7afd5c288bef06c5465833c737856415" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Standard Order: Overview' /&gt;&lt;sap id='sbar/pane[0]' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ucas:ReadStatusbar.Target>
+                          </ucas:ReadStatusbar>
+                          <Assign sap:VirtualizedContainerService.HintSize="496,72" sap2010:WorkflowViewState.IdRef="Assign_9">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[sales]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[SalesOrder(1)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,103.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sales Order created&quot;+sales]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                          <Sequence sap:VirtualizedContainerService.HintSize="496,636" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="sd:DataTable" Name="SalesOrdertable" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:BuildDataTable DataTable="[SalesOrdertable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="434,68.66666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Sales_x0020_Order_x0020_Number&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{sales}]" DataTable="[SalesOrdertable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                            <ui:WriteCsvFile AddHeaders="True" DataTable="[SalesOrdertable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Data\OutPut Data\SalesOrder_OutPut.csv" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:WriteCsvFile>
+                          </Sequence>
+                        </Sequence>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ForEachRow>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:ArgumentException" sap:VirtualizedContainerService.HintSize="638.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:ArgumentException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:ArgumentException" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SAPLogout.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SAPLogout.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1042" Arguments="[SAPApplication]" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="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" InformativeScreenshot="8173c463ccd062c2c7aea6ff5ad67a66.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

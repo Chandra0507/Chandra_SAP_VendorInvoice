@@ -1,0 +1,12 @@
+﻿{
+  "Id": "wHVK-h7-R0qZ644pbh19eg",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/wHVK-h7-R0qZ644pbh19eg",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/os0NDJ1aPEipB6V9vbCWNg",
+  "Name": "Create Standard order: Overview",
+  "Type": "Screen",
+  "Created": "2022-11-03T06:03:57.9432057Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-03T06:03:57.9432057Z"
+}

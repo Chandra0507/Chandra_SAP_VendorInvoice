@@ -1,0 +1,14 @@
+﻿{
+  "Id": "AbC0tOYYT06sA5lot3jljg",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/AbC0tOYYT06sA5lot3jljg",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/yNOILezm2EymV8WGXtUexQ",
+  "Name": "BackButton",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2022-11-07T05:56:55.811972Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-07T05:56:55.811972Z"
+}

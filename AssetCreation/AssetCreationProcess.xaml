@@ -1,0 +1,458 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Ass_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="AssertinputDataFile" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1150,3548</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Ass_1_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="51">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Ass_1" sap:VirtualizedContainerService.HintSize="718,3483.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="AssertCreationProcess" sap:VirtualizedContainerService.HintSize="676,3393.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SAP Easy Access" sap:VirtualizedContainerService.HintSize="614,3271.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="580,2965.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[AssertinputDataFile]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="538,2872.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currRow" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,2744.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="vendorResponce" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="CallTransaction_2" Transaction="[currRow.Item(&quot;TileCode&quot;).ToString]">
+                        <ucas:CallTransaction.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8dd1bf52-202d-40fc-96ae-a4e2f5072551" InformativeScreenshot="784ddc68c460061a36d99ea2ed0551f4">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ucas:CallTransaction.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ucas:CallTransaction>
+                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\3.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NTakeScreenshot.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="523334b4-0425-438c-957f-c746cbc2cec3" InformativeScreenshot="4fa09b5902a336d949bced2623540e05.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTakeScreenshot.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTakeScreenshot>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnetringAssertClass" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Text="[currRow.Item(&quot;AssetClassTextField&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="398, 310, 142, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Asset Class'" FullSelectorArgument="&lt;sap id='usr/ctxtANLA-ANLKL' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtANLA-ANLKL' /&gt;" Guid="bc7615f2-5561-4bb5-9108-e50af44163b1" InformativeScreenshot="ebb8e10d8d501a0173b325b0e82adfb9.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Initial screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringCompanyCode" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Text="[currRow.Item(&quot;CompanyCodeTextField&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="398, 341, 64, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Company Code'" FullSelectorArgument="&lt;sap id='usr/ctxtANLA-BUKRS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtANLA-BUKRS' /&gt;" Guid="ae5a492f-c909-4e87-8615-f8db9aab0075" InformativeScreenshot="419b8c298ea948bbd16856dfbec35433.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Initial screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\4.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NTakeScreenshot.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="c34bb61b-ff10-4c41-9ea3-3a5d61dde272" InformativeScreenshot="40f6c46814f2e9bdf09a6e32d264cd06.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Initial screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTakeScreenshot.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTakeScreenshot>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringNumOfSimilarAssert" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Text="[currRow.Item(&quot;NumOfSimilarAssetsTextField&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="398, 372, 51, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'1'" FullSelectorArgument="&lt;sap id='usr/txtRA02S-NASSETS' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtRA02S-NASSETS' /&gt;" Guid="17a8f52b-f9db-4f8e-a062-ec350afe32cc" InformativeScreenshot="664c97f42d95ad5f03adaee3804d7b0a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Initial screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\5.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NTakeScreenshot.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="9d6b4408-c488-45bf-bd5f-7b5c7a2aef10" InformativeScreenshot="1d2af17c3d8390146c9961fd3e894722.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTakeScreenshot.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTakeScreenshot>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringValueOnAdditionalAssetDescriptionTextField1" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Text="[currRow.Item(&quot;AdditionalAssetDescriptionTextField1&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="320, 434, 662, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Asset'" FullSelectorArgument="&lt;sap id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB01/ssubSUBSC:SAPLATAB:0200/subAREA1:SAPLAIST:1140/txtANLA-TXT50' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB01/ssubSUBSC:SAPLATAB:0200/subAREA1:SAPLAIST:1140/txtANLA-TXT50' /&gt;" Guid="89c03d52-6cf2-4d61-a9a4-b95b9eca4ad1" InformativeScreenshot="96ca0be74083df7d603506ec112fe80e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringValueOnAdditionalAssetDescriptionTextField2" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Text="[currRow.Item(&quot;AdditionalAssetDescriptionTextField1&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="320, 465, 662, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField Additional'" FullSelectorArgument="&lt;sap id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB01/ssubSUBSC:SAPLATAB:0200/subAREA1:SAPLAIST:1140/txtANLA-TXA50' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB01/ssubSUBSC:SAPLATAB:0200/subAREA1:SAPLAIST:1140/txtANLA-TXA50' /&gt;" Guid="cacaa2d8-c0a0-426e-aa98-47307c782f2d" InformativeScreenshot="021852ac597940f2e1fe6aaeb4011397.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\6.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_4" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NTakeScreenshot.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="344e2922-5473-43c7-b83b-3881a8ef3233" InformativeScreenshot="c7eb75b8cd99a756f7b779aefa64ee6e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTakeScreenshot.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTakeScreenshot>
+                      <uix:NClick ClickType="Single" DisplayName="ClickOnDeprecationAreaTab" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="632, 343, 145, 17" DesignTimeScaleFactor="1.5" FriendlyName="'Deprec. Areas'" FullSelectorArgument="&lt;sap id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB08' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB08' check:text='Deprec. Areas' /&gt;" Guid="7b6eae79-8ab1-4411-b284-7811aa3cbb6c" InformativeScreenshot="66ee05c2ddc0b6290952d1417625c2db.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\7.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_5" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NTakeScreenshot.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="d37eaf58-078f-499e-9db3-b6aa434bf35d" InformativeScreenshot="17dc4a4a2525e63dd96d2d0519ca64a3.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTakeScreenshot.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTakeScreenshot>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="EnteringUseLifeValue" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Text="[currRow.Item(&quot;UserLifeNumberTxtField&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="456, 465, 111, 29" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'TextField UseLife'" FullSelectorArgument="&lt;sap colTooltip='Useful Life' id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB08/ssubSUBSC:SAPLATAB:0201/subAREA1:SAPLAIST:1190/tblSAPLAISTTC_ANLB' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colTooltip='Useful Life' id='usr/subTABSTRIP:SAPLATAB:0100/tabsTABSTRIP100/tabpTAB08/ssubSUBSC:SAPLATAB:0201/subAREA1:SAPLAIST:1190/tblSAPLAISTTC_ANLB' /&gt;" Guid="82125dd0-6958-42d3-a5fa-6df6e58ee2c6" InformativeScreenshot="5fff8140b4d6d29989171dcbf04def4a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTakeScreenshot DisplayName="Take Screenshot 'UserArea usr'" FileName="ScreenShots\8.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_6" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NTakeScreenshot.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="15, 235, 1912, 749" DesignTimeScaleFactor="1.5" ElementType="Container" FriendlyName="'UserArea usr'" FullSelectorArgument="&lt;sap id='usr' /&gt;" FuzzySelectorArgument="&lt;sap id='usr' /&gt;" Guid="72926b21-baa3-4eb6-b985-1d0763b691f8" InformativeScreenshot="4f5486549a2b3a6c8762096c7249d27b.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NTakeScreenshot.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTakeScreenshot>
+                      <uix:NClick ClickType="Single" DisplayName="ClickOnSaveButton" sap:VirtualizedContainerService.HintSize="462,62.666666666666664" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ac7cb752-2837-4a62-90cd-90049b6b5b28" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="377, 77, 44, 44" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Save (Ctrl+S)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" Guid="d20681f9-f056-43d5-a03b-a665f5930025" InformativeScreenshot="5e63caca6230e67b1d729484c394975c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Master data' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <Sequence DisplayName="CaptureTheResponseMessage" sap:VirtualizedContainerService.HintSize="462,1112" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="MessageTypeVendor" />
+                          <Variable x:TypeArguments="x:String" Name="MessageTextVendor" />
+                          <Variable x:TypeArguments="s:String[]" Name="MessageDataVendor" />
+                          <Variable x:TypeArguments="sd:DataTable" Name="DT" />
+                          <Variable x:TypeArguments="sd:DataTable" Name="DT_1" />
+                          <Variable x:TypeArguments="sd:DataTable" Name="TableData" />
+                          <Variable x:TypeArguments="sd:DataRow" Name="curRow" />
+                          <Variable x:TypeArguments="sd:DataTable" Name="myDataTable" />
+                          <Variable x:TypeArguments="x:String" Name="MessageTypeAssert" />
+                          <Variable x:TypeArguments="x:String" Name="MessageTextAssert" />
+                          <Variable x:TypeArguments="s:String[]" Name="MessageDataAssert" />
+                          <Variable x:TypeArguments="x:String" Name="assertNumber" />
+                          <Variable x:TypeArguments="s:String[]" Name="strSplitOutput" />
+                          <Variable x:TypeArguments="x:String" Name="assertNum" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" DisplayName="Read Status Bar 'StatusPane Document'" sap:VirtualizedContainerService.HintSize="400,280" sap2010:WorkflowViewState.IdRef="ReadStatusbar_2" MessageData="[MessageDataAssert]" MessageText="[MessageTextAssert]" MessageType="[MessageTypeAssert]">
+                          <ucas:ReadStatusbar.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8537662-b6a8-4a9b-9f82-8af51330dbf6" InformativeScreenshot="a6d285d67d712187d15b437f5ba79691" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Asset:  Initial screen' /&gt;&lt;sap id='sbar/pane[0]' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ucas:ReadStatusbar.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ucas:ReadStatusbar>
+                        <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="ScreenShots\9.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="400,62.666666666666664" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_8" Version="V3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTakeScreenshot>
+                        <Assign sap:VirtualizedContainerService.HintSize="400,72" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[assertNumber]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[MessageTextAssert]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="400,72" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="s:String[]">[strSplitOutput]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="s:String[]">[Split(assertNumber," ")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="400,72" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[assertNum]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[strSplitOutput(2)]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:02" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="400,95.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[assertNum]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:MessageBox>
+                        <Sequence DisplayName="WriteTheCaptureMsgToCSVFile" sap:VirtualizedContainerService.HintSize="400,93.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:BuildDataTable DataTable="[myDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="434,68.66666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;AssertNumber&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:BuildDataTable>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{assertNum}]" DataTable="[myDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,62.666666666666664" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:AddDataRow>
+                          <ui:WriteCsvFile AddHeaders="True" DataTable="[myDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Output\AssetResponse.csv" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:WriteCsvFile>
+                        </Sequence>
+                      </Sequence>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEachRow>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-11, -11, 1942, 1042" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="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" InformativeScreenshot="956aed4fea54118da4ee1e261d39aebe.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

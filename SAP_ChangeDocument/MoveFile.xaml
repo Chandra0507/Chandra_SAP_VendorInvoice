@@ -85,16 +85,8 @@
     </sap:WorkflowViewStateService.ViewState>
     <Sequence DisplayName="FileMoves" sap:VirtualizedContainerService.HintSize="498.6666666666667,523.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="pathTo">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">C:\SAP_UiPath\SAP_ChangeDocument\OldFiles</Literal>
-          </Variable.Default>
-        </Variable>
-        <Variable x:TypeArguments="x:String" Name="pathFrom">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">C:\SAP_UiPath\SAP_ChangeDocument\Output</Literal>
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:String" Default="C:\SAP_UiPath\SAP_ChangeDocument\OldFiles" Name="pathTo" />
+        <Variable x:TypeArguments="x:String" Default="C:\SAP_UiPath\SAP_ChangeDocument\Output" Name="pathFrom" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

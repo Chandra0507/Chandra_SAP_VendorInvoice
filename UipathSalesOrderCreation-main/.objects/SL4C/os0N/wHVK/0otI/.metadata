@@ -1,0 +1,16 @@
+﻿{
+  "Id": "0otI4jzb70Ck_MvlMYlTOg",
+  "Reference": "ZE59Q5W9PU-Hg-VHQ0Ritg/0otI4jzb70Ck_MvlMYlTOg",
+  "ParentRef": "ZE59Q5W9PU-Hg-VHQ0Ritg/wHVK-h7-R0qZ644pbh19eg",
+  "Name": "10",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-11-03T06:03:58.1154823Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-03T06:40:24.2003174Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
